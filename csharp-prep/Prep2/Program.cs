@@ -11,27 +11,27 @@ class Program
 
         if (num >= 90)
         {
-            Console.Write("Your grade in the class is an A.");
+            Console.WriteLine("Your grade in the class is an A.");
         }
 
         else if (num >= 80)
         {
-            Console.Write("Your grade in the class is an B.");
+            Console.WriteLine("Your grade in the class is an B.");
         }
 
         else if (num >= 70)
         {
-            Console.Write("Your grade in the class is an C.");
+            Console.WriteLine("Your grade in the class is an C.");
         }
 
         else if (num >= 60)
         {
-            Console.Write("Your grade in the class is an D.");
+            Console.WriteLine("Your grade in the class is an D.");
         }
 
         else
         {
-            Console.Write("Your grade in the class is an F.");
+            Console.WriteLine("Your grade in the class is an F.");
         }
 
         if (num >= 70)
@@ -41,7 +41,7 @@ class Program
 
         else
         {
-            Console.Write("It's ok, you'll do better next time.")
+            Console.Write("It's ok, you'll do better next time.");
         }
     }
 }
