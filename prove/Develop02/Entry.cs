@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 public class Entry
 {
     public string _date;
@@ -6,7 +8,8 @@ public class Entry
 
     public void Display()
     {
-        Console.WriteLine($"{_date} {_promptText} {_entryText}");
+        Console.WriteLine($"Date: {_date}");
+        Console.WriteLine($"Prompt: {_promptText}");
+        Console.WriteLine($"Entry: {_entryText}");
     }
-
 }
