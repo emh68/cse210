@@ -1,19 +1,21 @@
 using System;
-using System.Net.Quic;
+using System.Collections.Generic;
+using System.IO;
 
 class Program
 {
     static void Main(string[] args)
     {
-        PromptGenerator promptGenerator = new PromptGenerator();
+        // PromptGenerator promptGenerator = new PromptGenerator();
         Journal journal = new Journal();
+        Console.WriteLine("Welcome to the Journal Program!");
 
         bool quit = false;
 
         while (!quit)
         {
 
-            Console.WriteLine("Welcome to the Journal Program!\nPlease select one of the following choices: ");
+            Console.WriteLine("Please select one of the following choices: ");
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
@@ -24,8 +26,6 @@ class Program
             string choice = Console.ReadLine();
             if (choice == "1")
             {
-                Console.WriteLine(promptGenerator.GetRandomPrompt());
-                Console.ReadLine();
                 journal.AddEntry();
             }
 
@@ -36,12 +36,16 @@ class Program
 
             else if (choice == "3")
             {
-                Console.WriteLine("What is the filename? ");
+                Console.WriteLine("Enter the filename to load: ");
+                string filename = Console.ReadLine();
+                journal.LoadFromFile(filename);
             }
 
             else if (choice == "4")
             {
-                Console.WriteLine("What is the filename? ");
+                Console.WriteLine("Enter the filename to save: ");
+                string filename = Console.ReadLine();
+                journal.SaveToFile(filename);
             }
 
             else if (choice == "5")
