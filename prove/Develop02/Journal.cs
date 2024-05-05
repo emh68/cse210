@@ -55,4 +55,24 @@ public class Journal
         }
         Console.WriteLine("Entries saved to file successfully.");
     }
+
+    public void SearchEntries(string searchTerm)
+    {
+        List<Entry> searchResults = _entries.FindAll(entry =>
+            entry._date.Contains(searchTerm) || entry._promptText.Contains(searchTerm) || entry._entryText.Contains(searchTerm)
+        );
+
+        if (searchResults.Count == 0)
+        {
+            Console.WriteLine("No matching entries found.");
+        }
+        else
+        {
+            Console.WriteLine($"Found {searchResults.Count} matching entries:");
+            foreach (Entry entry in searchResults)
+            {
+                entry.Display();
+            }
+        }
+    }
 }

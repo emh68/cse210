@@ -20,7 +20,8 @@ class Program
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
-            Console.WriteLine("5. Quit");
+            Console.WriteLine("5. Search");
+            Console.WriteLine("6. Quit");
             Console.Write("What would you like to do? ");
 
             string choice = Console.ReadLine();
@@ -49,6 +50,13 @@ class Program
             }
 
             else if (choice == "5")
+            {
+                Console.WriteLine("Enter search term: ");
+                string searchTerm = Console.ReadLine();
+                journal.SearchEntries(searchTerm);
+            }
+
+            else if (choice == "6")
             {
                 quit = true;
             }
