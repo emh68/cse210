@@ -41,14 +41,25 @@
 //     }
 // }
 
-using System;
+// using System;
 
 
-class Program
+// class Program
+// {
+//     static void Main(string[] args)
+//     {
+
+//     }
+
+// }
+
+using System.Collections.Generic;
+
+List<string> words = new List<string> {"camera", "apple", "mouse", "keyboard"};
+
+Console.WriteLine(words.Count);
+
+for (int i = 0; i < words.Count; i++)
 {
-    static void Main(string[] args)
-    {
-
-    }
-
+    Console.WriteLine(words[i]);
 }
