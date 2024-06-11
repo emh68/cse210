@@ -11,6 +11,7 @@ public class Reference
         _chapter = chapter;
         _verse = verse;
     }
+
     public Reference(string book, int chapter, int startVerse, int endVerse = -1)
     {
         _book = book;
@@ -29,30 +30,18 @@ public class Reference
     {
         get { return _chapter; }
         set { _chapter = value; }
-        // {
-        //     if (value > 0) _chapter = value;
-        //     else throw new ArgumentException("Chapter must be greater than 0.");
-        // }
     }
 
     public int verse
     {
         get { return _verse; }
         set { _verse = value; }
-        // {
-        //     if (value > 0) _verse = value;
-        //     else throw new ArgumentException("Verse must be greater than 0.");
-        // }
     }
 
     public int EndVerse
     {
         get { return _endVerse; }
         set { _endVerse = value; }
-        // {
-        //     if (value == -1 || value >= _verse) _endVerse = value;
-        //     else throw new ArgumentException("End verse must not be the same as starting verse.");
-        // }
     }
 
     public string GetDisplayText()
@@ -65,6 +54,5 @@ public class Reference
         {
             return $"{_book} {_chapter}:{_verse}";
         }
-
     }
 }

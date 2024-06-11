@@ -12,12 +12,17 @@ public class Scripture
     public void HideRandomWords(int numberToHide)
     {
         Random random = new Random();
-        int wordsToHide = Math.Min(numberToHide, _words.Count);
-        List<int> indices = Enumerable.Range(0, _words.Count).OrderBy(x => random.Next()).Take(wordsToHide).ToList();
+        var visibleWords = _words.Where(word => !word.IsHidden()).ToList();
+        int wordsToHide = Math.Min(numberToHide, visibleWords.Count);
 
-        foreach (int index in indices)
+        if (wordsToHide > 0)
         {
-            _words[index].Hide();
+            List<int> indices = Enumerable.Range(0, visibleWords.Count).OrderBy(x => random.Next()).Take(wordsToHide).ToList();
+
+            foreach (int index in indices)
+            {
+                visibleWords[index].Hide();
+            }
         }
     }
 
