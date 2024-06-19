@@ -12,14 +12,17 @@ public class Activity
         _duration = duration;
     }
 
-    public void DisplayStartingMessage(string name)
+    public void DisplayStartingMessage()
     {
-        string startingMessage = $"Welcome to the {name} activity!";
+        Console.WriteLine($"Welcome to the {_name} activity!");
+        Console.WriteLine(_description);
+        Console.WriteLine("Prepare to begin...");
+        ShowSpinner(seconds);
     }
 
     public void DisplayEndingMessage()
     {
-        string endingMessage = "The activity has ended. Well done!";
+        Console.WriteLine("The activity has ended. Well done!");
     }
 
     public void ShowSpinner(int seconds)
