@@ -16,8 +16,8 @@ public class Activity
     {
         Console.WriteLine($"Welcome to the {_name} activity!");
         Console.WriteLine(_description);
-        Console.WriteLine("Prepare to begin...");
-        ShowSpinner(seconds);
+        Console.WriteLine("Get ready to begin...");
+        ShowSpinner(10);
     }
 
     public void DisplayEndingMessage()
@@ -27,7 +27,27 @@ public class Activity
 
     public void ShowSpinner(int seconds)
     {
+        List<string> animation = new List<string>()
+        {
+            "|", "/", "-", "\\"
+        };
 
+        int animationLength = animation.Count;
+        int i = 0;
+
+        while (i < seconds)
+
+        {
+            string s = animation[i % animationLength];
+            Console.Write(s);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+            i++;
+        }
+        if (i >= animation.Count)
+        {
+            i = 0;
+        }
     }
 
     public void ShowCountDown(int seconds)
@@ -36,7 +56,7 @@ public class Activity
         {
             Console.Write(i);
             Thread.Sleep(1000);
-            Console.Write("\b \b\b \b");
+            Console.Write("\b \b");
         }
     }
 }
