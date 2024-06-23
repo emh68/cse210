@@ -36,14 +36,20 @@ class Program
                 reflecting.Run();
             }
 
-            // else if (choice == "3")
-            // {
-            //     listing.Run();
-            // }
+            else if (choice == "3")
+            {
+                Listing listing = new Listing(0, "Listing", "This activity will help you reflect on the good things in your life by having you list as many things as you can for the duration of the time.\nYou will be given a prompt to help guide you, but feel free to use your own if you choose to.", 0);
+                listing.Run();
+            }
 
             else if (choice == "4")
             {
                 quit = true;
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid option. Please enter the number from the menu corresponding to your choice.");
             }
         }
     }
