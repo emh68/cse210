@@ -16,7 +16,7 @@ public class Activity
     {
         Console.WriteLine($"Welcome to the {_name} activity!");
         Console.WriteLine(_description);
-        Console.WriteLine("Get ready to begin...");
+        Console.WriteLine("Get ready...");
         ShowSpinner(10);
     }
 
