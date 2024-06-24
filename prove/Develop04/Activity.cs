@@ -44,6 +44,7 @@ public class Activity
             Console.Write("\b \b");
             i++;
         }
+
         if (i >= animation.Count)
         {
             i = 0;
@@ -64,5 +65,4 @@ public class Activity
             Console.SetCursorPosition(Console.CursorLeft - 2, Console.CursorTop);
         }
     }
-
 }
