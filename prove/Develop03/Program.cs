@@ -11,14 +11,9 @@ class Program
     static void Main(string[] args)
     {
         string jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "scriptures.json");
-
-        // Read the JSON file
         string jsonString = File.ReadAllText(jsonFilePath);
-
-        // Deserialize the JSON string to a nested dictionary
         var scriptureData = JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, Dictionary<string, string>>>>(jsonString);
 
-        // Prompt the user for book, chapter, and verses
         Console.WriteLine("Enter the book name (i.e. Genesis, Exodus): ");
         string book = Console.ReadLine();
 
@@ -31,7 +26,6 @@ class Program
         int startVerse;
         int endVerse = -1;
 
-        // Check if it's a range of verses
         if (verseInput.Contains("-"))
         {
             var verses = verseInput.Split('-');
@@ -43,12 +37,11 @@ class Program
             startVerse = int.Parse(verseInput);
         }
 
-        // Retrieve the scripture
         string scriptureText = GetScriptureText(scriptureData, book, chapter, startVerse, endVerse);
 
         if (!string.IsNullOrEmpty(scriptureText))
         {
-            // Create and display the scripture
+
             Reference reference = new Reference(book, chapter, startVerse, endVerse);
             Scripture scripture = new Scripture(reference, scriptureText);
 
