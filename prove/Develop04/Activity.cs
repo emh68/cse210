@@ -54,9 +54,15 @@ public class Activity
     {
         for (int i = seconds; i > 0; i--)
         {
-            Console.Write(i);
+            Console.Write(i.ToString().PadLeft(2));
             Thread.Sleep(1000);
-            Console.Write("\b \b");
+
+            Console.SetCursorPosition(Console.CursorLeft - 2, Console.CursorTop);
+
+            Console.Write("  ");
+
+            Console.SetCursorPosition(Console.CursorLeft - 2, Console.CursorTop);
         }
     }
+
 }
