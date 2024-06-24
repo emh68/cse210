@@ -65,4 +65,5 @@ public class Activity
             Console.SetCursorPosition(Console.CursorLeft - 2, Console.CursorTop);
         }
     }
+
 }
