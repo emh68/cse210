@@ -9,9 +9,8 @@ class Program
     static void Main(string[] args)
     {
 
-        // Activity activity = new Activity();
-        // Breathing breathing = new Breathing();
-        // Console.WriteLine($"Welcome to the mindfulness program!");
+        Console.WriteLine($"Welcome to the mindfulness program!");
+        Console.WriteLine();
 
         bool quit = false;
 
@@ -31,10 +30,11 @@ class Program
                 breathing.Run();
             }
 
-            // else if (choice == "2")
-            // {
-            //     reflecting.Run();
-            // }
+            else if (choice == "2")
+            {
+                Reflecting reflecting = new Reflecting("Reflecting", "This activity will help you reflect on times in your life when you have shown strength and resilience.\nThis will help you recognize the power you have and how you can use it in other aspects of your life.", 0);
+                reflecting.Run();
+            }
 
             // else if (choice == "3")
             // {
