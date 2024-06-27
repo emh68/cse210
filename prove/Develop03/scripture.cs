@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class Scripture
 {
     private Reference _reference;
@@ -33,29 +30,11 @@ public class Scripture
 
         int wordsToHide = Math.Min(numberToHide, visibleWords.Count);
 
-        if (wordsToHide > 0)
+        for (int i = 0; i < wordsToHide; i++)
         {
-            List<int> indices = new List<int>();
-            for (int i = 0; i < visibleWords.Count; i++)
-            {
-                indices.Add(i);
-            }
-
-            // Shuffle indices using Fisher-Yates algorithm
-            for (int i = indices.Count - 1; i > 0; i--)
-            {
-                int j = _random.Next(0, i + 1);
-                int temp = indices[i];
-                indices[i] = indices[j];
-                indices[j] = temp;
-            }
-
-            indices.RemoveRange(wordsToHide, indices.Count - wordsToHide);
-
-            foreach (int index in indices)
-            {
-                visibleWords[index].Hide();
-            }
+            int randomIndex = _random.Next(0, visibleWords.Count);
+            visibleWords[randomIndex].Hide();
+            visibleWords.RemoveAt(randomIndex);
         }
     }
 

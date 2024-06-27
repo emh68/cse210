@@ -20,7 +20,7 @@ class Program
         Console.WriteLine("Enter the verse or verses (i.e. 1 or 1-5): ");
         string verseInput = Console.ReadLine();
 
-        int startVerse = 0;
+        int startVerse;
         int endVerse = -1;
 
         var verses = verseInput.Split('-');
