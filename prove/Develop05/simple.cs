@@ -2,23 +2,24 @@ public class SimpleGoal : Goal
 {
     private bool _isComplete;
 
-    public SimpleGoal(string name, string description, string points, bool IsComplete) : base(name, description, points)
+    public SimpleGoal(string name, string description, int points, bool isComplete, GoalManager goalManager) : base(name, description, points, goalManager)
     {
-        _isComplete = IsComplete;
+        _isComplete = isComplete;
     }
 
-    public void RecordEvent()
+    public override void RecordEvent()
     {
-
+        _isComplete = true;
+        _goalManager.IncreaseScore(GetPoints());
     }
 
-    public bool IsComplete()
+    public override bool IsComplete()
     {
-
+        return _isComplete;
     }
 
-    public string GetStringRepresentation()
+    public override string GetStringRepresentation()
     {
-
+        return $"[{(IsComplete() ? "X" : " ")}] {GetName()}: {GetDescription()} - {GetPoints()} points";
     }
 }

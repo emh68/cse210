@@ -1,14 +1,16 @@
-public class Goal
+public abstract class Goal
 {
     private string _shortName;
     private string _description;
-    private string _points;
+    private int _points;
+    protected GoalManager _goalManager;
 
-    public Goal(string shortName, string description, string points)
+    public Goal(string shortName, string description, int points, GoalManager goalManager)
     {
         _shortName = shortName;
         _description = description;
         _points = points;
+        _goalManager = goalManager;
     }
 
     public string GetName()
@@ -30,34 +32,25 @@ public class Goal
         _description = description;
     }
 
-    public string GetPoints()
+    public int GetPoints()
     {
         return _points;
     }
 
-    public void SetPoints(string points)
+    public void SetPoints(int points)
     {
         _points = points;
     }
 
-    public void RecordEvent()
-    {
+    public abstract void RecordEvent();
 
+    public abstract bool IsComplete();
+
+    public virtual string GetDetailsString()
+    {
+        return $"{GetName()}: {GetDescription()} - {GetPoints()} points";
     }
 
-    public bool IsComplete()
-    {
-
-    }
-
-    public string GetDetailsString()
-    {
-
-    }
-
-    public string GetStringRepresentation()
-    {
-
-    }
+    public abstract string GetStringRepresentation();
 
 }
