@@ -1,7 +1,11 @@
+using System.Speech.Synthesis;
 public class Breathing : Activity
 {
+    private SpeechSynthesizer _synth;
     public Breathing(string name, string description, int duration) : base(name, description, duration)
     {
+        _synth = new SpeechSynthesizer();
+        _synth.SetOutputToDefaultAudioDevice();
     }
 
     public void Run()
@@ -23,14 +27,19 @@ public class Breathing : Activity
             {
                 if (duration <= 0) break;
 
+                _synth.Speak(stage.Message);
                 Console.Write($"{stage.Message}");
                 ShowCountDown(stage.Duration);
                 Console.WriteLine();
                 duration -= stage.Duration;
-
             }
         }
-
         DisplayEndingMessage();
+    }
+
+    public override void DisplayEndingMessage()
+    {
+        Console.WriteLine("The breathing session has ended. Well done!");
+        _synth.Speak("The breathing session has ended. Well done!");
     }
 }

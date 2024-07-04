@@ -9,7 +9,11 @@ public class Reflecting : Activity
             "Think of a time when you stood up for someone else.",
             "Think of a time when you did something really difficult.",
             "Think of a time when you helped someone in need.",
-            "Think of a time when you did something truly selfless."
+            "Think of a time when you did something truly selfless.",
+            "Think of the last time you did something really fun or exciting.",
+            "Think of the last time you were really really happy.",
+            "Think of a time when you felt like you made a difference in the world.",
+            "Think of a time when you did something out of your comfort zone."
         };
 
         _questions = new List<string>()

@@ -1,4 +1,3 @@
-
 public class Activity
 {
     private string _name;
@@ -20,7 +19,7 @@ public class Activity
         ShowSpinner(10);
     }
 
-    public void DisplayEndingMessage()
+    public virtual void DisplayEndingMessage()
     {
         Console.WriteLine("The activity has ended. Well done!");
     }

@@ -14,7 +14,12 @@ public class Listing : Activity
             "What are personal strengths of yours?",
             "Who are people that you have helped this week?",
             "When have you felt the Holy Ghost this month?",
-            "Who are some of your personal heroes?"
+            "Who are some of your personal heroes?",
+            "What is something good that happened to you this week?",
+            "What is something you have never done before that you would like to do and why?",
+            "If you could go anywhere in the world where would it be and why?",
+            "What are some items on your 'Bucket List'?",
+            "What is something you could do to make the world a better place?"
         };
     }
 
