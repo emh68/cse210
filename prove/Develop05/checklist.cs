@@ -9,7 +9,6 @@ public class ChecklistGoal : Goal
         _amountCompleted = amountCompleted;
         _target = target;
         _bonus = bonus;
-        // _goalManager = goalManager;
     }
 
     public override void RecordEvent()
@@ -27,13 +26,13 @@ public class ChecklistGoal : Goal
         return _amountCompleted >= _target;
     }
 
-    public override string GetDetailsString()
+    public override string GetSavedString()
     {
-        return $"{GetName()}: {GetDescription()} - {GetPoints()} points, Completed {_amountCompleted}/{_target} times";
+        return $"ChecklistGoal|{GetName()}|{GetDescription()}|{GetPoints()}|{_amountCompleted}|{_target}|{_bonus}";
     }
 
     public override string GetStringRepresentation()
     {
-        return $"[{(IsComplete() ? "X" : " ")}] {GetName()}: {GetDescription()} - {GetPoints()} points, Completed {_amountCompleted}/{_target} times, Bonus: {_bonus} points";
+        return $"[{(IsComplete() ? "X" : " ")}] {GetName()} - {GetDescription()} - {GetPoints()} points, Completed {_amountCompleted}/{_target} times, Bonus: {_bonus} points";
     }
 }

@@ -43,14 +43,7 @@ public abstract class Goal
     }
 
     public abstract void RecordEvent();
-
     public abstract bool IsComplete();
-
-    public virtual string GetDetailsString()
-    {
-        return $"{GetName()}: {GetDescription()} - {GetPoints()} points";
-    }
-
+    public abstract string GetSavedString();
     public abstract string GetStringRepresentation();
-
 }

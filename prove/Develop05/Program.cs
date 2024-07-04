@@ -101,15 +101,15 @@ class Program
 
     public static void SaveGoals(GoalManager goalManager)
     {
-        Console.WriteLine("Enter the file path to save goals: ");
-        string filePath = Console.ReadLine();
-        goalManager.SaveGoals(filePath);
+        Console.WriteLine("Enter a filename to save goals: ");
+        string filename = Console.ReadLine();
+        goalManager.SaveGoals(filename);
     }
 
     public static void LoadGoals(GoalManager goalManager)
     {
-        Console.WriteLine("Enter the file path to load goals: ");
-        string filePath = Console.ReadLine();
-        goalManager.LoadGoals(filePath);
+        Console.WriteLine("Enter a filename to load goals: ");
+        string filename = Console.ReadLine();
+        goalManager.LoadGoals(filename);
     }
 }

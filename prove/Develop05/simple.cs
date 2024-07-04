@@ -18,8 +18,12 @@ public class SimpleGoal : Goal
         return _isComplete;
     }
 
+    public override string GetSavedString()
+    {
+        return $"SimpleGoal|{GetName()}|{GetDescription()}|{GetPoints()}|{_isComplete}";
+    }
     public override string GetStringRepresentation()
     {
-        return $"[{(IsComplete() ? "X" : " ")}] {GetName()}: {GetDescription()} - {GetPoints()} points";
+        return $"[{(IsComplete() ? "X" : " ")}] {GetName()} - {GetDescription()} - {GetPoints()} points";
     }
 }

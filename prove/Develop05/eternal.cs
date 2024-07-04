@@ -7,8 +7,7 @@ public class EternalGoal : Goal
 
     public override void RecordEvent()
     {
-        GoalManager goalManager = new GoalManager();
-        goalManager.IncreaseScore(GetPoints());
+        _goalManager.IncreaseScore(GetPoints());
     }
 
     public override bool IsComplete()
@@ -16,8 +15,12 @@ public class EternalGoal : Goal
         return false;
     }
 
+    public override string GetSavedString()
+    {
+        return $"EternalGoal|{GetName()}|{GetDescription()}|{GetPoints()}";
+    }
     public override string GetStringRepresentation()
     {
-        return $"[ ] {GetName()}: {GetDescription()} - {GetPoints()} points (Eternal)";
+        return $"[ ] {GetName()} - {GetDescription()} - {GetPoints()} points (Eternal)";
     }
 }
