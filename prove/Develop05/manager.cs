@@ -126,7 +126,6 @@ public class GoalManager
             int bonus = int.Parse(parts[6].Trim());
             return new ChecklistGoal(name, description, points, amountCompleted, target, bonus, this);
         }
-
         return null;
     }
 }
