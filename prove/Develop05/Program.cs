@@ -80,9 +80,9 @@ class Program
         }
         else if (choice == 3)
         {
-            Console.WriteLine("Enter target count: ");
+            Console.WriteLine("What is the target number of times this goal needs to be accomplished for a bonus? ");
             int target = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter bonus points: ");
+            Console.WriteLine("Enter bonus points for accomplishing this goal the target number of times: ");
             int bonus = int.Parse(Console.ReadLine());
             goalManager.CreateGoal(new ChecklistGoal(name, description, points, 0, target, bonus, goalManager));
         }
