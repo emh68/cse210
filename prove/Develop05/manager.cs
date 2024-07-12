@@ -6,21 +6,39 @@ public class GoalManager
 {
     private List<Goal> _goals;
     private int _score;
+    private int _level;
+    private int _pointsToNextLevel;
 
     public GoalManager()
     {
         _goals = new List<Goal>();
         _score = 0;
+        _level = 1;
+        _pointsToNextLevel = 500;
     }
 
     public void IncreaseScore(int points)
     {
         _score += points;
+        CheckLevelUp();
+    }
+
+    private void CheckLevelUp()
+    {
+        while (_score >= _pointsToNextLevel)
+        {
+            _score -= _pointsToNextLevel;
+            _level++;
+            _pointsToNextLevel = (int)(_pointsToNextLevel * 2);
+            Console.WriteLine($"Congratulations! You reached level {_level}!");
+        }
     }
 
     public void DisplayPlayerInfo()
     {
         Console.WriteLine($"Current Score: {_score}");
+        Console.WriteLine($"Current Level: {_level}");
+        Console.WriteLine($"Points to next level: {_pointsToNextLevel - _score}");
     }
 
     public void ListGoalNames()
@@ -69,7 +87,7 @@ public class GoalManager
     {
         using (StreamWriter save = new StreamWriter(filename))
         {
-            save.WriteLine(_score);
+            save.WriteLine($"{_score}|{_level}|{_pointsToNextLevel}");
             foreach (var goal in _goals)
             {
                 string savedString = goal.GetSavedString();
@@ -84,7 +102,10 @@ public class GoalManager
         _goals.Clear();
         using (StreamReader reader = new StreamReader(filename))
         {
-            _score = int.Parse(reader.ReadLine());
+            string[] playerInfo = reader.ReadLine().Split('|');
+            _score = int.Parse(playerInfo[0]);
+            _level = int.Parse(playerInfo[1]);
+            _pointsToNextLevel = int.Parse(playerInfo[2]);
 
             string goalData;
             while ((goalData = reader.ReadLine()) != null)
