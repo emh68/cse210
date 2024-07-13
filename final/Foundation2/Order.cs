@@ -30,9 +30,9 @@ public class Order
         string packingLabel = "";
         foreach (var product in _products)
         {
-            packingLabel += $"PID: {product.GetProductId()} - {product.GetProductName()} - Qty({product.GetProductQuantity()})    ${product.GetPricePerUnit():0.00}\n";
+            packingLabel += $"PID:{product.GetProductId()} - {product.GetProductName()} - Qty({product.GetProductQuantity()})   ${product.GetPricePerUnit():0.00}\n";
         }
-        return packingLabel.Trim();
+        return packingLabel;
     }
 
     public string GetShippingLabel()
