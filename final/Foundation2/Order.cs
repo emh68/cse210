@@ -17,8 +17,12 @@ public class Order
         {
             totalCost += product.CalculateProductTotalCost();
         }
-        decimal shippingCost = _customer.IsCustomerInUsa() ? 5 : 35;
-        return totalCost + shippingCost;
+        return totalCost + CalculateShippingCost();
+    }
+
+    public decimal CalculateShippingCost()
+    {
+        return _customer.IsCustomerInUsa() ? 5 : 35;
     }
 
     public string GetPackingLabel()
