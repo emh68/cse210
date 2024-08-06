@@ -114,78 +114,75 @@
 //     }
 // }
 
-using System;
+// using System;
 
-namespace library_demo
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Book book1 = new Book();
-            book1.SetAuthor("Smith");
-            book1.SetTitle("A Great Book");
+// namespace library_demo
+// {
+//     class Program
+//     {
+//         static void Main(string[] args)
+//         {
+//             Book book1 = new Book();
+//             book1.SetAuthor("Smith");
+//             book1.SetTitle("A Great Book");
 
-            PictureBook book2 = new PictureBook();
-            book2.SetAuthor("Jones");
-            book2.SetTitle("Wonderful Picture Book");
-            book2.SetIllustrator("Mark Roberts");
+//             PictureBook book2 = new PictureBook();
+//             book2.SetAuthor("Jones");
+//             book2.SetTitle("Wonderful Picture Book");
+//             book2.SetIllustrator("Mark Roberts");
 
-            Console.WriteLine(book1.GetBookInfo());
-            Console.WriteLine(book2.GetBookInfo());
-        }
-    }
-
-
-    public class Book
-    {
-        private string _author = "";
-        private string _title = "";
-
-        public string GetAuthor()
-        {
-            return _author;
-        }
-
-        public void SetAuthor(string author)
-        {
-            _author = author;
-        }
-
-        public string GetTitle()
-        {
-            return _title;
-        }
-
-        public void SetTitle(string title)
-        {
-            _title = title;
-        }
-
-        public virtual string GetBookInfo()
-        {
-            return $"{_title} by {_author}";
-        }
-    }
-    public class PictureBook : Book
-    {
-        private string _illustrator = "";
-
-        public string GetIllustrator()
-        {
-            return _illustrator;
-        }
-
-        public void SetIllustrator(string illustrator)
-        {
-            _illustrator = illustrator;
-        }
-        public override string GetBookInfo()
-        {
-            return $"{GetTitle()} by {GetAuthor()}, illustrated by {_illustrator}";
-        }
-    }
-}
+//             Console.WriteLine(book1.GetBookInfo());
+//             Console.WriteLine(book2.GetBookInfo());
+//         }
+//     }
 
 
+//     public class Book
+//     {
+//         private string _author = "";
+//         private string _title = "";
 
+//         public string GetAuthor()
+//         {
+//             return _author;
+//         }
+
+//         public void SetAuthor(string author)
+//         {
+//             _author = author;
+//         }
+
+//         public string GetTitle()
+//         {
+//             return _title;
+//         }
+
+//         public void SetTitle(string title)
+//         {
+//             _title = title;
+//         }
+
+//         public virtual string GetBookInfo()
+//         {
+//             return $"{_title} by {_author}";
+//         }
+//     }
+//     public class PictureBook : Book
+//     {
+//         private string _illustrator = "";
+
+//         public string GetIllustrator()
+//         {
+//             return _illustrator;
+//         }
+
+//         public void SetIllustrator(string illustrator)
+//         {
+//             _illustrator = illustrator;
+//         }
+//         public override string GetBookInfo()
+//         {
+//             return $"{GetTitle()} by {GetAuthor()}, illustrated by {_illustrator}";
+//         }
+//     }
+// }
