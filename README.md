@@ -18,16 +18,12 @@ Heraclitus, a Greek philosopher, once said, *"There is nothing permanent except 
 
 This course introduces the principles of **classes** and **objects**, with a focus on **abstraction**, **encapsulation**, **inheritance**, and **polymorphism**.
 
----
-
 ## **Course Outcomes**
 
 By the end of this course, you will be able to:
 1. Articulate the principles of programming with classes.
 2. Design software using the principles of programming with classes.
 3. Develop working software using techniques of programming with classes.
-
----
 
 ## Weekly Content Overview
 
@@ -41,35 +37,20 @@ By the end of this course, you will be able to:
 | 6    | Final Project   | Applying all learned principles in a comprehensive software development project.              |
 | 7    | Conclusion      | Reflecting on the course content and solidifying understanding of programming with classes.   |
 
----
-
-## **Major Assignments**
-
-Each week emphasizes different aspects of programming with classes. Below is a breakdown of the major assignments:
-
-| **Assignment**       | **Description**                                                                  | **Outcome** |
-|-----------------------|----------------------------------------------------------------------------------|-------------|
-| **Design**            | Weekly design tasks for team activities.                                        | 2           |
-| **Programming Projects** | Weekly programming projects focused on specific principles of class-based programming. | 3           |
-| **Articulate Write-ups** | Weekly written explanations of principles and their application in code.      | 1           |
-
----
-
 ## **Technologies Used**
 
 - **C#**: Primary programming language for projects.
 - **Git/GitHub**: Version control and code sharing.
 
----
-
 ## **Final Project**
 
 In Weeks 6 and 7, students design and complete a **final project** that applies all principles of programming with classes. This project serves as a culmination of the course and demonstrates the student's ability to develop high-quality software.
 
-For details on the final project and weekly assignments, visit the official course website:  
-[**CSE 210 Course Content**](https://byui-cse.github.io/cse210-ww-course-2023/index.html)
+You can view the final project at the following link:<br>
+**[CSE 210 Final Project](https://github.com/emh68/cse210/tree/main/final)**
 
----
+## Resources
+- [Course Content](https://byui-cse.github.io/cse210-ww-course-2023/index.html)
 
 ## **Course Disclaimer**
 
