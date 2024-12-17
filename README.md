@@ -58,7 +58,6 @@ Each week emphasizes different aspects of programming with classes. Below is a b
 ## **Technologies Used**
 
 - **C#**: Primary programming language for projects.
-- **Microsoft Teams/Zoom**: Collaboration tools for team activities.
 - **Git/GitHub**: Version control and code sharing.
 
 ---
