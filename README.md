@@ -54,4 +54,4 @@ You can view the final project at the following link:<br>
 
 ## **Course Disclaimer**
 
-> *This repository contains starter code provided by BYU-Idaho for **CSE 210: Programming with Classes**. This material is for educational purposes only. Redistribution or reuse is prohibited without permission.*
+> *Please note this material is for educational purposes only. Redistribution or reuse is prohibited without permission.*
